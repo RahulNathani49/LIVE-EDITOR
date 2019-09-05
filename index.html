@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/code_energy_favicon.png">
+    <title>Live Code Editor</title>
+</head>
+<style>
+    .settings {
+        display: none;
+    }
+</style>
+
+<body class="h-100" style="background-color: #333641">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col-6">
+                <div class="tool overflow-auto position-relative" style="background-color: #1a1b1f;">
+                    <h1 class="text-center text-white py-2 m-0">Type Code</h1>
+                    <i class="fa fa-cog text-white  p-2 float-left" aria-hidden="true" style="cursor: pointer;font-size: 20px;" onclick="toggle()"></i>
+                    <div class="settings" id="set">
+                        <label class="text-white">Font-Size : </label>
+                        <input type="text" style="width:60px" onkeyup="change()" id="input">
+                        <label class="text-white">px</label>
+                    </div>
+                </div>
+
+                <textarea id="doccontent" class="w-100 h-100" onkeyup="refresh()" style="background-color: #1d1e22;color: #fff; padding: 20px;outline: none;border:none" placeholder="<Type Your Code>"></textarea>
+            </div>
+            <div class="col-6">
+                <h1 class="text-center text-white py-2 m-0" style="background-color: #1a1b1f;">Live Preview</h1>
+                <iframe id="viewer" class="w-100 h-100" style="background-color: white;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
